@@ -1,0 +1,27 @@
+<script>
+         // 原型链实例
+         function People(name,age,sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+        }
+        People.prototype.nationality = "中国";
+        
+        var xiaohong = new People("小红",16,"女");
+        var tom = new People("汤姆",25,"男");
+        tom.nationality = "美国";
+        console.log(xiaohong.nationality);
+        console.log(xiaohong);
+        console.log(tom);
+
+        // 检查对象是否真正拥有某种属性或方法
+        console.log(xiaohong.hasOwnProperty("name"));
+        console.log(xiaohong.hasOwnProperty("age"));
+        console.log(xiaohong.hasOwnProperty("sex"));
+        console.log(xiaohong.hasOwnProperty("nationality"));
+
+        console.log("name" in xiaohong);
+        console.log("age" in xiaohong);
+        console.log("sex" in xiaohong);
+        console.log("nationality" in xiaohong);
+    </script>
